@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # My applications register
+    'apps.account',
+    'apps.product',
+
 ]
 
 MIDDLEWARE = [
@@ -75,8 +80,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':  'car_shop_db',
+        'USER': 'user_car_shop',
+        'PASSWORD': '9900',
+        'HOST': '127.0.0.1',
+        'PORT': '5432'
     }
 }
 
