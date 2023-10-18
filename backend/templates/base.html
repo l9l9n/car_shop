@@ -51,6 +51,18 @@
 					<div class="phone">+1 (800) 455-55-95</div>
 					<div>WinterJuice, LLC, 1875 South Grant Street, Suite 680, San Mateo, CA 94402</div>
 				</div>
+				{% if not request.user.is_authenticated %}
+                            <div class="login" style="z-index:5;">
+                                <a href="{% url 'sign_in' %}">Войти</a>
+                            </div>
+                            <div class="register" style="z-index:5;">
+                                <a href="{% url 'register' %}">Регистрация</a>
+                            </div>
+                            {% else %}
+                            <div class="login" style="z-index:5;">
+                                <a href="{% url 'logout' %}">Выйти</a>
+                            </div>
+                            {% endif %}
 				<div class="socials">
 					<a href="#"><img src="images/fb_icon.png" alt=""></a>
 					<a href="#"><img src="images/twitter_icon.png" alt=""></a>
