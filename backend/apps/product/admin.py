@@ -19,7 +19,7 @@ class UserAdmin(admin.ModelAdmin):
         # 'photo',
         'color',
         'price',
-        'transsmision',
+        'transmission',
         'engin',
         'volume',
         'vile_side',

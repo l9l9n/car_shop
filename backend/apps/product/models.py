@@ -8,7 +8,7 @@ class Car(models.Model):
     age = models.DateTimeField("Год выпуска")
     # photo = models.ImageField('Фото машины', upload_to="media/")
     color = models.CharField("Цвет машины", max_length=90)
-    transsmision = models.CharField("Коробка передач", choices=TRANSMISSOINS_CHOICE, default='Автомат', max_length=90)
+    transmission = models.CharField("Коробка передач", choices=TRANSMISSOINS_CHOICE, default='Автомат', max_length=90)
     price = models.DecimalField("Цена", max_digits=9, decimal_places=2)
     engin = models.CharField("Тип давигателя", choices=ENGINE_CHOICE, default='Бензин', max_length=90)
     volume = models.DecimalField('Объем двигателя', max_digits=9, decimal_places=2)
