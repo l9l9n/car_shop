@@ -3,7 +3,7 @@ from .models import Car, CarImage
 
 
 @admin.register(CarImage)
-class UserAdmin(admin.ModelAdmin):
+class PhotoAdmin(admin.ModelAdmin):
     list_display = [
         'car',
         'photo',

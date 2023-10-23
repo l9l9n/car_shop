@@ -13,7 +13,7 @@
 								<div class="slide">
 									<img src="images/placeholders/620x425.gif" alt=""/>
 									<div class="description">
-										<h2 class="title">2012 Mercedes-Benz CLS 320</h2>
+										<h2 class="title"></h2>
 										<p class="desc"><span><strong>Miles: </strong>25,000</span><span><strong>Engine: </strong>2.6</span></p>
 										<div class="price">$ 32 200</div>
 									</div>
@@ -185,92 +185,19 @@
 				</div>
 				<div class="recent">
 					<h2><strong>Recent</strong> listings</h2>
+
 					<div class="recent_carousel">
-						<div class="slide">
-							<a href="#">
+						{% for cars in car %}
+							<div class="slide">
+							  <a href="#">
 								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
-						<div class="slide">
-							<a href="#">
-								<img src="images/placeholders/220x164.gif" alt=""/>
-								<div class="description">Registration 2010<br/>3.0 Diesel<br/>230 HP<br/>Body Coupe<br/>80 000 Miles</div>
-								<div class="title">Mercedes-Benz <span class="price">$ 115 265</span></div>
-							</a>
-						</div>
+								<div class="description">{{cars.age}}<br/>{{cars.volume}} {{cars.engin}}<br/>{{cars.mileage}}</div>
+								<div class="title">{{cars.name}}<span class="price">{{cars.price}}</span></div>
+							  </a>
+							</div>
+						{% endfor %}
 					</div>
+
 				</div>
 				<div class="banners">
 					<div class="banner_1 main_banner">
